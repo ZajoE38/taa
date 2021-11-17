@@ -1,0 +1,2 @@
+*** Variables ***
+${foo}    lorem ipsum
