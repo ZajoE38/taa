@@ -1,6 +1,7 @@
 .venv
 .others
 .idea
+.png
 **/*.pptx
 **/*.xlsx
 **/*.html

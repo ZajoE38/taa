@@ -18,10 +18,26 @@ Print Number Of Employees
     ${counter} =    get text    xpath://div[@class="about persons"]/h4
     Log    ${counter}
 
-Click Dropdown Button Kariera
+Open Page Kontaktuj Nas
     mouse over    ${DROPDOWN_KARIERA}
     wait until element is visible    ${BTN_KONTAKTUJ_NAS}
     click element    ${BTN_KONTAKTUJ_NAS}
+
+Open Page Volne Miesta
+    mouse over    ${DROPDOWN_KARIERA}
+    wait until element is visible    ${BTN_VOLNE_MIESTA}
+    click element    ${BTN_VOLNE_MIESTA}
+
+Open Position Automation Tester
+    element should be visible    ${LINK_AUTO_TESTER}
+    click element    ${LINK_AUTO_TESTER}
+    element should be visible    ${BTN_DAJ_NAM_VEDIET}
+
+Apply For Automation Tester
+    click element    ${BTN_DAJ_NAM_VEDIET}
+    location should be    ${URL_DAJ_NAM_VEDIET}
+
+
 
 Input Name
     [Arguments]    ${name}
