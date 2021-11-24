@@ -15,6 +15,8 @@ Click Button O Nas
 Print Number Of Employees
     sleep    3
     #  preco nefunguje Set Local Variable?
+    #  lebo jej treba value priradit pri inicializacii
+    #  neda sa jej priradit vratena hodnota
     ${counter} =    get text    xpath://div[@class="about persons"]/h4
     Log    ${counter}
 
