@@ -6,8 +6,24 @@ Test Setup  Open Chrome On Alza Homepage
 Test Teardown   Close Browser
 
 
+*** Variables ***
+${searchfield_input}    //input[@id="edtSearch"]
+${searchfield_btn}    //div[@id="btnSearch"]
+
+
+*** Keywords ***
+Search In Searchbox
+    wait until element is visible    ${searchfield}
+    input text    lego
+
+Click On Top Rated Header Tab
+    wait until element is visible    ${top_rated}
+    click element    ${top_rated}
+
+
+
 *** Test Cases ***
-311 Adding a specific item not logged
+311 Adding a specific item unlogged
     Click On Computers and Laptops
     Click On Laptops Category
     Click On Home and Office Category
@@ -26,5 +42,11 @@ Test Teardown   Close Browser
     Select Dispatch Method
     Select Payment Method
     Location Should Be    https://www.alza.sk/Order3.htm
+
+
+312 Adding a multiple items unlogged
+    Search In Searchbox
+
+
 
 

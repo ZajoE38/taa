@@ -5,6 +5,7 @@ ${laptops}                      //div[@class="catlist"]//span[text()="Laptops"]
 ${home_and_office}              xpath=(//a[contains(@href, "basic-home-and-office")])[1]
 ${affordable}                   xpath:(//a[contains(@href, "affordable")])[1]
 ${bestsellers}                  //a[@href="#nejprodavanejsi"]
+${top_rated}                   //a[@href="#nejlepehodnocene"]
 ${product_price}                //tr[@class="pricenormal"]//td[@class="c2"]/span
 ${add_to_cart}                  //a[@class="btnx normal green buy"]
 ${circleLoader}                 css=.circle-loader-container
