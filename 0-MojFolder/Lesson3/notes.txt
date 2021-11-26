@@ -1,0 +1,7 @@
+$ pabot --proceses 10 --testlevelspilit
+
+ak nezadam verziu pip requirements vzdy nainstaluje poslednu
+
+webdriver moze byt aj vo venv v scriptoch
+
+pre robot fw je default identifier name alebo id

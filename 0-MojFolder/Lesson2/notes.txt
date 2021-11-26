@@ -1,0 +1,23 @@
+ak ma padnut tak nech pada na assertone
+
+Ak test prejde v trace vrati hodnotu None
+
+$ robot -L TRACE test1.robot
+
+$ robot -L TRACE -t "Moj prvy test" test1.robot
+
+[Documentation] - prejavi sa v logu
+
+[Tag] - zgrupovanie testov
+
+--include je na logicke rozdelenie celkov
+$ robot -i regression test1.robot #pusti vsetky z foldru ktore maju tag regression
+ak dam viacero -i tak ich vnima ako OR
+$ robot -i regressionANDsmoke
+
+$ robot --dryrun <tag>
+
+$ robot --skiponfailure <tag>
+(test nezoberie ale uvidim ho v reporte. zostane zlty. ak test opravim, zmazem tag)
+
+$ robot -v <variable_name>:<value>
