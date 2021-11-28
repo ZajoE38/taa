@@ -2,6 +2,7 @@
 Resource    ../variables/variables.robot
 
 *** Keywords ***
+#  311
 Open Chrome On Alza Homepage
     Open Browser    https://www.alza.sk/EN/   gc
     Set Window Size    1920    1000
@@ -84,3 +85,24 @@ Select Payment Method
     wait until element is visible    ${delivery_continue_btn}
     click element    ${delivery_continue_btn}
     sleep    3
+
+#  312
+Search In Searchbox
+    [Arguments]    ${text}
+    wait until element is visible    ${searchfield_input}
+    input text    ${searchfield_input}    ${text}
+    click element    ${searchfield_btn}
+
+Click On Top Rated Header Tab
+    wait until element is visible    ${top_rated}
+    click element    ${top_rated}
+
+Navigate Grid
+    [Arguments]    ${col}    ${row}
+    ${grid} =    xpath://div[@id="boxes"]/div
+    ${col_count}    get count    //div[@id="boxes"]/div[contains(@class, "firstRow")]
+    ${incremet}    evaluate    ${col_count}*${row}
+    ${index}    evaluate    ${increment}+${col}
+    ${box}    ${grid}[${index}]
+    click element    ${box}
+

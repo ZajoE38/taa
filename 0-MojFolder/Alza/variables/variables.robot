@@ -5,7 +5,7 @@ ${laptops}                      //div[@class="catlist"]//span[text()="Laptops"]
 ${home_and_office}              xpath=(//a[contains(@href, "basic-home-and-office")])[1]
 ${affordable}                   xpath:(//a[contains(@href, "affordable")])[1]
 ${bestsellers}                  //a[@href="#nejprodavanejsi"]
-${top_rated}                   //a[@href="#nejlepehodnocene"]
+${top_rated}                    //a[@href="#nejlepehodnocene"]
 ${product_price}                //tr[@class="pricenormal"]//td[@class="c2"]/span
 ${add_to_cart}                  //a[@class="btnx normal green buy"]
 ${circleLoader}                 css=.circle-loader-container
@@ -23,3 +23,6 @@ ${confirm_selection_btn}        //a[contains(@class, "confirmDialog")]
 ${payment_credit_debit_card}    //span[contains(text(), "Credit / Debit Card")]
 ${delivery_continue_btn}        //a[@id="confirmOrder2Button"]
 ${delivery_continue_btn}        //div[@id="confirmOrder2ButtonContainer"]
+#  312
+${searchfield_input}    //input[@id="edtSearch"]
+${searchfield_btn}    //div[@id="btnSearch"]

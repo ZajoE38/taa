@@ -1,5 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
+Library    gridnav.py
 Resource    ./Keywords/kw.robot
 Resource    ./Variables/variables.robot
 Test Setup  Open Chrome On Alza Homepage
@@ -7,18 +8,10 @@ Test Teardown   Close Browser
 
 
 *** Variables ***
-${searchfield_input}    //input[@id="edtSearch"]
-${searchfield_btn}    //div[@id="btnSearch"]
+
 
 
 *** Keywords ***
-Search In Searchbox
-    wait until element is visible    ${searchfield}
-    input text    lego
-
-Click On Top Rated Header Tab
-    wait until element is visible    ${top_rated}
-    click element    ${top_rated}
 
 
 
@@ -45,7 +38,11 @@ Click On Top Rated Header Tab
 
 
 312 Adding a multiple items unlogged
-    Search In Searchbox
+    Search In Searchbox    lego
+    Click On Top Rated Header Tab
+    Navigate Grid    2    3
+
+
 
 
 
